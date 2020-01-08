@@ -30,7 +30,7 @@
 				bottom: 0;
 				width: 27px;
 				display: inline-block;
-				background: url(../../../static/images/guide/arrow.png);
+				background: url(../images/guide/arrow.png);
 			}
 			&.passed{
 				.step{
@@ -171,7 +171,7 @@
 					&>span{
 						width: 10px;
 						height: 10px;
-						background: url(../../../static/images/timeline/down.png);
+						background: url(../images/timeline/down.png);
 						left: 7px;
 						top: 34px;
 					}
@@ -189,7 +189,7 @@
 				}
 				.content-right{
 					.left-arrow{
-						background: url(../../../static/images/timeline/arrow.png) no-repeat;
+						background: url(../images/timeline/arrow.png) no-repeat;
 						background-position: 0 -13px;
 					}
 					.detail-outer{
@@ -218,7 +218,7 @@
 						top: 50%;
 						margin-top: -5px;
 						left: 7px;
-						background: url(../../../static/images/timeline/dot.png) no-repeat;
+						background: url(../images/timeline/dot.png) no-repeat;
 					}
 					&>i{
 						position: absolute;
@@ -257,7 +257,7 @@
 					height: 16px;
 					top: 14px;
 					left: 4px;
-					background: url(../../../static/images/timeline/blank.png) no-repeat;
+					background: url(../images/timeline/blank.png) no-repeat;
 					z-index: 1;
 				}
 				&>i{
@@ -289,7 +289,7 @@
 				top: 50%;
 				margin-top: -7px;
 				left: 0;
-				background: url(../../../static/images/timeline/arrow.png) no-repeat;
+				background: url(../images/timeline/arrow.png) no-repeat;
 			}
 			.detail-outer{
 				padding: 10px 0;
