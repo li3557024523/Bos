@@ -12,7 +12,7 @@ spring:
     url: jdbc:mysql://localhost:3306/bos?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
+    password: 1234
     #Druid连接池配置
     druid:
       initial-size: 5
