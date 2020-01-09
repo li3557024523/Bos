@@ -1,18 +1,39 @@
 package com.xr.bos.pojo;
 
 
-import java.util.List;
-
 public class SorStorage {
 
   private Integer id;
   private java.sql.Date acceptDate;
-  private SyEmp acceptPerson;
+  private Integer acceptPerson;
   private String acceptCompany;
-  private SyEmp deliveryPerson;
+  private Integer deliveryPerson;
   private String deliveryCompany;
-  private List<SorStoragedetails> SOR_StorageDetails;
+  private SyEmp syEmp;
+public SorStorage(){
 
+}
+  @Override
+  public String toString() {
+
+    return "SorStorage{" +
+            "id=" + id +
+            ", acceptDate=" + acceptDate +
+            ", acceptPerson=" + acceptPerson +
+            ", acceptCompany='" + acceptCompany + '\'' +
+            ", deliveryPerson=" + deliveryPerson +
+            ", deliveryCompany='" + deliveryCompany + '\'' +
+            ", syEmp=" + syEmp +
+            '}';
+  }
+
+  public SyEmp getSyEmp() {
+    return syEmp;
+  }
+
+  public void setSyEmp(SyEmp syEmp) {
+    this.syEmp = syEmp;
+  }
 
   public Integer getId() {
     return id;
@@ -32,11 +53,11 @@ public class SorStorage {
   }
 
 
-  public SyEmp getAcceptPerson() {
+  public Integer getAcceptPerson() {
     return acceptPerson;
   }
 
-  public void setAcceptPerson(SyEmp acceptPerson) {
+  public void setAcceptPerson(Integer acceptPerson) {
     this.acceptPerson = acceptPerson;
   }
 
@@ -50,11 +71,11 @@ public class SorStorage {
   }
 
 
-  public SyEmp getDeliveryPerson() {
+  public Integer getDeliveryPerson() {
     return deliveryPerson;
   }
 
-  public void setDeliveryPerson(SyEmp deliveryPerson) {
+  public void setDeliveryPerson(Integer deliveryPerson) {
     this.deliveryPerson = deliveryPerson;
   }
 
