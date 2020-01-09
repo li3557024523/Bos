@@ -6,7 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class TestController {
-    @RequestMapping("/login")
+    @RequestMapping("/test")
     public ModelAndView test() {
         ModelAndView mv = new ModelAndView();
         mv.setViewName("pages/login.html");
