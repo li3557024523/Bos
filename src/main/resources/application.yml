@@ -75,5 +75,3 @@ mybatis:
   type-aliases-package: com.xr.springboot.pojo
   configuration:
     map-underscore-to-camel-case: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-

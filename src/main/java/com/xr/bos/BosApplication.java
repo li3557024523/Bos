@@ -5,8 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan("com.xr.bos.controller")
-@MapperScan("com.xr.bos.dao")
+@MapperScan("com.xr.bos.mapper")
 @SpringBootApplication
 public class BosApplication {
 

@@ -6,12 +6,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class TestController {
-    @RequestMapping("/test")
+    @RequestMapping("/login")
     public ModelAndView test() {
         ModelAndView mv = new ModelAndView();
-        String a = "你🐎真好康！！！";
-        String aa = "随便";
-        mv.addObject("test", a);
         mv.setViewName("pages/login.html");
         return mv;
     }
