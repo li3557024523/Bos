@@ -93,7 +93,23 @@ public class SyEmp {
   public void setDisabled(String disabled) {
     this.disabled = disabled;
   }
+public SyEmp(){
 
+  @Override
+  public String toString() {
+    return "SyEmp{" +
+            "id=" + id +
+            ", empName='" + empName + '\'' +
+            ", empNo='" + empNo + '\'' +
+            ", pwd='" + pwd + '\'' +
+            ", queryPwd='" + queryPwd + '\'' +
+            ", roleId=" + roleId +
+            ", empUnit=" + empUnit +
+            ", remark='" + remark + '\'' +
+            ", disabled='" + disabled + '\'' +
+            '}';
+  }
+}
   @Override
   public String toString() {
     return "SyEmp{" +
