@@ -12,4 +12,11 @@ public class TestController {
         mv.setViewName("pages/login.html");
         return mv;
     }
+
+    @RequestMapping("/test")
+    public ModelAndView test1() {
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("/test.html");
+        return mv;
+    }
 }

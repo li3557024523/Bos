@@ -30,30 +30,36 @@
 				              <span>请输入用户名</span>
 				            </div>
 						 -->
-						<form method="post">
+						<form method="post" action="/go">
 							<div class="lg-username input-item clearfix">
 								<i class="iconfont">&#xe60d;</i>
-								<input class="EmpName" type="text" placeholder="账号/邮箱">
+								<input name="empName" id="empName" type="text" placeholder="账号/邮箱">
 							</div>
 							<div class="lg-password input-item clearfix">
 								<i class="iconfont">&#xe634;</i>
-								<input class="Pwd" type="password" placeholder="请输入密码">
+								<input name="pwd" type="password" placeholder="请输入密码">
 							</div>
 							<div class="lg-check clearfix">
 								<div class="input-item">
 									<i class="iconfont">&#xe633;</i>
-									<input type="text" placeholder="验证码">
+									<input name="yzm" type="text" placeholder="验证码">
 								</div>
-								<span class="check-code">XD34F</span>
+								<span>
+									<img src="/Code" id="co" onclick="this.src='Code?yzm='+Math.random()" >
+								</span>
 							</div>
 							<div class="tips clearfix">
 								<label><input type="checkbox" checked="checked">记住用户名</label>
 								<a href="javascript:;" class="register">立即注册</a>
 								<a href="javascript:;" class="forget-pwd">忘记密码？</a>
 							</div>
+							<center>
+                                <span id="sp"></span>
 							<div class="enter">
-								<a href="javascript:;" class="supplier" onClick="javascript:window.location='go'">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                    <button style="color: #1da02b">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+<!--									<a href="javascript:;" class="supplier" >登&nbsp;&nbsp;&nbsp;&nbsp;录</a>-->
 							</div>
+							</center>
 						</form>
 					</div>
 				</div>
@@ -73,9 +79,45 @@
 			<div class="other-info">建议使用IE8及以上版本浏览器&nbsp;联系电话：0731-83062466</div>
 		</div>
 	</div>
-</body> 
+</body>
 </html>
-    
-<script type="text/javascript">
 
+<script type="text/javascript">
+	$(function(){
+		$("form").submit(function(){
+			return checkUserblanck()&&yz();
+		})
+		$("#yzm").blur(yz);
+	});
+		//验证用户是否输入空格
+		function checkUserblanck(){
+			var empName =$("#empName").val();
+			if($.trim(user)==""){
+				location.reload();
+				return false;
+			}
+			return true;
+		}
+		//验证验证码是否一致
+		function yz(){
+			var b =false;
+			var code =$("#yzm").val();
+			$.ajax({
+				type :"POST",
+				url :"/yzcode?c="+code,
+				async:false,
+				success:function(a){
+					if(a=="1"){
+						b= true;
+						var user =document.getElementById("yzm");
+						user.setCustomValidity("");
+					}else{
+						var user =document.getElementById("yzm");
+						user.setCustomValidity("*验证码输入有误");
+						b= false;
+					}
+				}
+			})
+			return b;
+		}
 </script>
